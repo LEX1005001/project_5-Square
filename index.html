@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Расчет площади фигур</title>
+    <link rel="stylesheet" href="css\style.css" />
+  </head>
+  <body>
+    
+    <!-- Начало контейнера -->
+    <div class="container">
+      <h1>Расчет площади фигур</h1>
+    
+      <!-- Выбор фигур для нахождения S -->
+      <label for="figure">Выберите фигуру:</label>
+      <select id="figure">
+        <option value="circle">Круг</option>
+        <option value="rectangle">Прямоугольник</option>
+        <option value="triangle">Треугольник</option>
+        <option value="square">Квадрат</option>
+      </select>
+
+      <!-- Реализация логики для предоставления ввода данных для оперд фигуры -->
+      <div id="inputs">
+        <!-- Круг -->
+        <div class="input-group" id="circle-inputs">
+          <label for="radius">Радиус:</label>
+          <input type="number" id="radius" placeholder="Введите радиус" />
+        </div>
+        <!-- Прямоугольник -->
+        <div class="input-group" id="rectangle-inputs" style="display: none">
+          <label for="length">Длина:</label>
+          <input type="number" id="length" placeholder="Введите длину" />
+          <label for="width">Ширина:</label>
+          <input type="number" id="width" placeholder="Введите ширину" />
+        </div>
+        <!-- Треугольник -->
+        <div class="input-group" id="triangle-inputs" style="display: none">
+          <label for="base">Основание:</label>
+          <input type="number" id="base" placeholder="Введите основание" />
+          <label for="height">Высота:</label>
+          <input type="number" id="height" placeholder="Введите высоту" />
+        </div>
+        <!-- Квадрат -->
+        <div class="input-group" id="square-inputs" style="display: none">
+          <label for="side">Сторона:</label>
+          <input type="number" id="side" placeholder="Введите длину стороны" />
+        </div>
+      </div>
+      <!-- Конец Реализации логики -->
+
+      <!-- кнопка для расчёта площади -->
+      <button id="calculate">Считать площадь</button>
+
+      <!-- Поле для вывода результата -->
+      <div class="result">
+        <h2>Площадь: <span id="area">0</span></h2>
+      </div>
+    </div>
+    <!-- Конец контейнера -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
